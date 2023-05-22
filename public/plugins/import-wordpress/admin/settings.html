@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Manrope:300,400,600,600" rel="stylesheet" type="text/css">
+
+  <base href="">
+
+  <title>Vvveb -  Import Wordpress Plugin</title>
+
+  <link href="css/admin.css" rel="stylesheet">
+  <link href="libs/media/media.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <div id="container">
+
+    <div class="sidebar" data-v-copy-from="index.html,.sidebar">
+    </div>
+
+
+    <div class="main">
+
+      <div class="clearfix top-header" data-v-copy-from="index.html,.top-header">
+
+      </div>
+
+      <form id="settings-form" action="" method="post" class="needs-validation" novalidate data-v-product>
+        <input type="hidden" name="action" id="action" value="save">
+        <div class="actions">
+          <div class="title">
+            <h4 class="text-muted mt-2">
+              <i class="lab la-wordpress-simple" data-v-menu-item-icon=""></i>&ensp;
+              Import Wordpress content
+            </h4>
+          </div>
+          <div class="btns">
+<!--
+          <button type="submit" href="" data-bs-toggle="tooltip" title="" class="btn btn-primary btn-icon ms-1" data-v-original-title="Save post" onclick="document.getElementById('action').value ='save';if (validator(validator_json)) document.getElementById('settings-form').submit();">
+            <i class="ion-edit"></i>&nbsp; Save settings
+          </button>
+-->
+          </div>
+        </div>
+        <div>
+          <div id="main-content">
+
+         	<div class="notifications" data-v-notifications data-v-copy-from="index.html,.notifications"></div>
+
+            <div class="content clearfix settings">
+
+				 
+			<div class="card my-4">
+			  <div class="card-body">
+			    <h5 class="card-title">Import local Wordpress data</h5>
+			    <p class="card-text">Upload a Wordpress xml file to start importing</p>
+
+
+
+			    <a href title="Upload xml or sql file" class="btn btn-primary btn-icon ms-1 d-inline-block" data-v-original-title="Upload xml or sql file" data-bs-toggle="collapse" data-bs-target=".upload-collapse" aria-expanded="false">
+			      <i class="la la-cloud-upload-alt la-lg"></i>&nbsp; Upload file
+			    </a>
+
+
+			    <form id="upload" method="post" enctype="multipart/form-data" class="upload-collapse collapse">
+			      <input type="hidden" name="action" value="upload">
+			      <div>
+				<h3>Drop or choose files to upload</h3>
+
+				<input type="file" name="file" onchange="upload.submit()" accept="text/xml, .xml">
+
+				<div class="status"></div>
+			      </div>
+			    </form>
+
+
+
+			  </div>
+			</div>
+
+                  
+            </div>
+          </div>
+      </form>
+
+    </div>
+  </div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="module" src="../../../js/admin.js"></script>
+
+  <script data-v-validator-json=""></script>
+  <script src="js/validator.js"></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Vvveb\\CategoriesTest::testAddCategory":8,"Vvveb\\CategoriesTest::testGetCategory":8,"Vvveb\\PostsTest::testEquality":8,"Vvveb\\ProductsTest::testEquality":8},"times":{"Vvveb\\CategoriesTest::testAddCategory":0.002,"Vvveb\\CategoriesTest::testGetCategory":0.001,"Vvveb\\PostsTest::testEquality":0.005,"Vvveb\\ProductsTest::testEquality":0.002}}

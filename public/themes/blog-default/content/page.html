@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <base href="../">
+
+  <title>Page - Vvveb Default Blog Template</title>
+
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+
+<body class="page">
+
+  <header id="main-header" class="">
+    <nav class="navbar navbar-expand-lg navbar-light p-4">
+      <div class="container-fluid">
+        <div>
+          <span class="d-lg-none d-block">
+            <!-- hidden spacer to center brand on mobile -->
+          </span>
+
+          <a class="navbar-brand d-none d-lg-inline-block pb-0" data-v-url="index/index" href="/"> Vvveb Blog </a>
+          <small class="d-block text-muted">minimal blog template</small>
+
+          <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+            <img src="//placehold.it/40?text=LOGO" alt="logo">
+          </a>
+          <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+
+
+
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbar" data-v-component-menu="header" data-v-slug="main-menu">
+          <ul class="navbar-nav ms-auto flex-nowrap" data-v-menu-items>
+            <li class="nav-item dropdown" data-v-menu-item data-v-class-if-has-dropdown="category.children > 0">
+
+              <a class="nav-link" href="https://themes.vvveb.com" data-v-if="category.children <= 0" data-v-menu-item-url>
+                <span data-v-menu-item-name>Services</span>
+              </a>
+
+              <a class="nav-link dropdown-toggle" href="#" data-v-if="category.children > 0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-v-menu-item-url>
+                <span data-v-menu-item-name>Resources</span>
+              </a>
+
+              <div class="dropdown-menu" data-v-menu-item-recursive>
+                <div data-v-menu-item class="nav-item" data-v-menu-item data-v-class-if-dropdown="category.children > 0">
+                  <a class="dropdown-item" href="https://github.com/givanz/VvvebJs/wiki" data-v-menu-item-url>
+                    <span data-v-menu-item-name>User Documentation</span>
+                  </a>
+                </div>
+                <div data-v-menu-item class="nav-item" data-v-menu-item data-v-class-if-dropdown="category.children > 0">
+                  <a class="dropdown-item" href="https://github.com/givanz/VvvebJs/wiki" data-v-menu-item-url>
+                    <span data-v-menu-item-name>Developer Documentation</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item" data-v-menu-item>
+              <a class="nav-link" href="https://blog.vvveb.com" data-v-menu-item-url>
+                <span data-v-menu-item-name>Blog</span>
+              </a>
+            </li>
+            <li class="nav-item" data-v-menu-item>
+              <a class="nav-link" href="https://www.vvveb.com/page/contact" data-v-menu-item-url>
+                <span data-v-menu-item-name>Contact</span>
+              </a>
+            </li>
+            <li class="nav-item" data-v-menu-item>
+              <a class="nav-link" href="https://www.vvveb.com" data-v-menu-item-url>
+                <span data-v-menu-item-name>About us</span>
+              </a>
+            </li>
+            <li>
+              <!-- User Login Info -->
+              <div class="dropdown user-box nav-item">
+                <a class="dropdown-toggle nav-link " href role="button" id="user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-v-url="user/index">
+                  <!-- <img src="img/user.svg" width="20" alt> -->
+                  <i class="la la-lg la-user"></i>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-end login-box p-4" aria-labelledby="user-dropdown">
+
+                  <div data-v-component-user>
+
+                    <div class="notifications" data-v-notifications>
+
+                      <div class="alert alert-danger d-flex alert-dismissable" role="alert" data-v-if="this.errors">
+
+                        <div class="icon align-middle me-2">
+                          <i class="align-middle la la-2x lh-1 la-exclamation-triangle"></i>
+                        </div>
+
+                        <div class="flex-grow-1 align-self-center text-small">
+                          <div data-v-notification-error>
+                            <div data-v-notification-text>
+                              Vvveb 0.2 is now available! <a href="update">Update now</a>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <button type="button" class="btn-close align-middle" data-bs-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">
+                            <!-- <i class="la la-times"></i> -->
+                          </span>
+                        </button>
+                      </div>
+
+                      <div class="alert alert-success d-flex  alert-dismissable d-flex" role="alert" data-v-notification-success>
+
+                        <div class="icon align-middle me-2">
+                          <i class="align-middle la la-2x lh-1 la-check-circle"></i>
+                        </div>
+
+                        <div class="flex-grow-1 align-self-center align-middle" data-v-notification-text>
+                          You successfully read this important alert message.
+                        </div>
+
+                        <button type="button" class="btn-close align-middle" data-bs-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">
+                            <!-- <i class="la la-times"></i> -->
+                          </span>
+                        </button>
+                      </div>
+
+                      <div class="alert alert-primary d-flex alert-dismissable d-flex" role="alert" data-v-notification-info>
+
+                        <div class="icon align-middle me-2">
+                          <i class="align-middle la la-2x lh-1  la-info-circle"></i>
+                        </div>
+
+                        <div class="flex-grow-1 align-self-center" data-v-notification-text>
+                          You successfully read this important alert message.
+                        </div>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">
+                            <!-- <i class="la la-times"></i> -->
+                          </span>
+                        </button>
+                      </div>
+
+                    </div>
+
+
+                    <form action method="post" enctype="multipart/form-data" data-v-url="user/login" data-v-vvveb-action="login" data-v-vvveb-on="submit">
+
+                      <input type="hidden" name="csrf" data-v-csrf>
+
+                      <div class="login-form" data-v-if-not="component.user_id">
+
+                        <div class="mb-3">
+                          <label class="form-label" for="input-email">E-Mail Address</label>
+                          <input type="email" name="email" value placeholder="E-Mail Address" id="input-email" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                          <label class="form-label" for="input-password">Password</label>
+                          <input type="password" minlength="4" autocorrect="off" name="password" value placeholder="Password" id="input-password" class="form-control" required>
+                        </div>
+
+                        <button type="submit" value="Login" class="btn btn-primary 	w-100	">
+
+                          <span class="loading d-none">
+                            <span class="spinner-border spinner-border-sm align-middle" role="status" aria-hidden="true">
+                            </span>
+                            <span>Authenticating</span>...
+                          </span>
+
+                          <span class="button-text">
+                            Login <i class="la la-arrow-right float-end ms-2"></i>
+                          </span>
+
+                        </button>
+                        <div class="my-2"></div>
+                        <a href="/user/reset" data-v-url="user/reset/index" class="my-2">Forgotten Password</a>
+
+                        <div class="my-2"></div>
+                        <a href="#">
+                          <span class="btn btn-secondary btn-sm">
+                            <i class="lab la-google la-lg"></i>
+                          </span>
+                        </a>
+                        <a href="#">
+                          <span class="btn btn-secondary btn-sm">
+                            <i class="lab la-facebook la-lg"></i>
+                          </span>
+                        </a>
+                        <hr>
+                        <span>Don’t have an account?</strong>
+                          <a href="/user/signup" data-v-url="user/signup/index">Register Account</a>
+
+                      </div>
+
+
+                      <div class="user-form" data-v-if="component.user_id">
+                        <div>Welcome <b data-v-display_name>John Doe</b>
+                        </div>
+
+                        <ul class="m-2 list-unstyled">
+                          <li>
+                            <a href="user" data-v-url="user/index">My account</a>
+                          </li>
+                          <li>
+                            <a href="user/comments" data-v-url="user/comments/index">Comments</a>
+                          </li>
+                          <li>
+                            <a href="user/orders" data-v-url="user/orders/index">Orders</a>
+                          </li>
+                          <li>
+                            <a href="user/downloads" data-v-url="user/downloads/index">Downloads</a>
+                          </li>
+                          <li>
+                            <a href="user/profile" data-v-url="user/profile/index">Profile</a>
+                          </li>
+                        </ul>
+
+
+                        <input type="hidden" name="logout">
+
+                        <button type="submit" value="logout" class="btn btn-primary 	w-100	">
+
+                          <span class="loading d-none">
+                            <span class="spinner-border spinner-border-sm align-middle" role="status" aria-hidden="true">
+                            </span>
+                            <span>Loading ...</span>...
+                          </span>
+
+                          <span class="button-text">
+                            Logout
+                          </span>
+
+                        </button>
+                      </div>
+                    </form>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+            </li>
+          </ul>
+
+
+          <form class="d-flex">
+
+            <div class="input-group">
+              <!-- input type="text" class="form-control" placeholder="Search for..." -->
+              <span class="input-group-append">
+                <button class="btn btn-light la-flip-horizontal" type="button">
+
+                  <i class="la la-search"></i>
+
+
+                </button>
+              </span>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+
+  <section class="inner-page-hero" data-v-component-post>
+    <div class="">
+      <div class="title-container">
+        <div class="container text-center mb-5">
+          <h1 data-v-post-name>Post title</h1>
+        </div>
+      </div>
+
+
+      <!-- img data-v-post-image src="img/bg-img/bg-7.jpg" alt="" -->
+    </div>
+  </section>
+
+  <main id="site-content" data-v-component-post>
+
+    <!-- Single Blog Post Thumb -->
+    <!-- 
+        <div class="inner-page-hero" data-v-if="post.img">
+			<div class="title-container">
+				<h1 data-v-post-name>Post title</h1>
+			</div>
+            <img data-v-post-img src="img/bg-img/bg-7.jpg" alt="">
+        </div>
+		-->
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <div class="">
+            <!--
+						<h1 class="text-center" data-v-if-not="post.img" data-v-post-name>Page title</h1>
+						-->
+
+            <div class="regular-page-text" data-v-post-content>
+              <h2>Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</h2>
+              <p>Mauris viverra cursus ante laoreet eleifend. Donec vel fringilla ante. Aenean finibus velit id urna vehicula, nec maximus est sollicitudin. Praesent at tempus lectus, eleifend blandit felis. Fusce augue arcu, consequat a nisl aliquet, consectetur elementum turpis. Donec iaculis lobortis nisl, et viverra risus imperdiet eu. Etiam mollis posuere elit non sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis arcu a magna sodales venenatis. Integer non diam sit amet magna luctus mollis ac eu nisi. In accumsan tellus ut dapibus blandit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container" data-v-component-menu="footer" data-v-menu_id="5">
+
+      <div class="row" data-v-menu-items>
+
+        <div class="col-md-3">
+          <img class="logo" src="img/logo.png">
+        </div>
+
+
+        <div class="col-md-3" data-v-menu-item data-v-if="category.children > 0">
+          <h6 data-v-menu-item-name>Vvveb</h6>
+          <nav data-v-menu-item-recursive>
+            <div data-v-menu-item data-v-if="category.children == 0">
+              <a href="https://themes.vvveb.com/" data-v-menu-item-url>
+                <span data-v-menu-item-name>Themes</span>
+              </a>
+            </div>
+            <div data-v-menu-item data-v-if="category.children == 0">
+              <a href="https://plugins.vvveb.com/" data-v-menu-item-url>
+                <span data-v-menu-item-name>Plugins</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <div class="col-md-3" data-v-menu-item data-v-if="category.children > 0">
+          <h6 data-v-menu-item-name>Resources</h6>
+          <nav data-v-menu-item-recursive>
+            <div data-v-menu-item data-v-if="category.children == 0">
+              <a href="https://github.com/givanz/VvvebJs/wiki" data-v-menu-item-url>
+                <span data-v-menu-item-name>User documentation</span>
+              </a>
+            </div>
+            <div data-v-menu-item data-v-if="category.children == 0">
+              <a href="https://github.com/givanz/VvvebJs/wiki" data-v-menu-item-url>
+                <span data-v-menu-item-name>Developer documentation</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <div class="col-md-3" data-v-menu-item data-v-if="category.children > 0">
+          <h6 data-v-menu-item-name>Contact</h6>
+          <nav data-v-menu-item-recursive>
+            <div data-v-menu-item data-v-if="category.children == 0">
+              <a href="" target="contact.html">Contact</a>
+            </div>
+          </nav>
+        </div>
+
+
+
+      </div>
+      <!--
+		<div class="row justify-content-end">
+			<div class="col-md-3 text-muted text-small mt-5">
+				&copy; <span data-v-year>2022</span> <span data-v-sitename>Vvveb</span>. Powered by <a href="//vvveb.com" target="_blank">Vvveb</a>	
+			</div>
+		</div>
+		-->
+
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="text-muted flex-grow-1">
+            <a class="btn-link text-muted" href="/page/terms-conditions" target="_blank">Terms and conditions</a> |
+            <a class="btn-link text-muted" href="/page/privacy-policy" target="_blank">Privacy Policy</a>
+          </div>
+          <div class="text-muted">
+            &copy; <span data-v-year>2022</span>
+            <span data-v-sitename>Vvveb</span>. <span>Powered by</span>
+            <a href="//vvveb.com" class="btn-link text-muted" target="_blank">Vvveb</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+</body>
+
+</html>

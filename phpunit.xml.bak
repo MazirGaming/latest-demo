@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="test.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="model-tests">
+			<directory suffix="Test.php">./tests/system/</directory>
+			<directory suffix="Test.php">./tests/psttt/</directory>
+            <directory suffix="Test.php">./tests/model/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="DB_HOST" value="127.0.0.1"/>
+        <env name="DB_USER" value="root"/>
+        <env name="DB_PASS" value="Dan1ela"/>
+        <env name="DB_NAME" value="vvveb"/>
+    </php>
+</phpunit>
