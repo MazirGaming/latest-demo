@@ -4,7 +4,7 @@
   array (
     'name' => 'Default site',
     'host' => '*.*.*',
-    'theme' => 'landing',
+    'theme' => 'eshop',
     'state' => 'live',
     'template' => 'index.html',
     'id' => 1,
