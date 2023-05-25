@@ -54,13 +54,13 @@ class Themes extends Extensions {
 			$folder      = Str::match('@/([^/]+)/[a-z]+.\w+$@', $file);
 			$dir         = Str::match('@(.+)/[a-z]+.\w+$@', $file);
 			$themeConfig = $dir . DS . 'theme.php';
-
+			
 			$theme           = [];
 			$theme['file']   = $file;
 			$theme['folder'] = $folder;
 			$theme['import'] = false;
 			$theme['author'] = 'n/a';
-
+			
 			if (file_exists($themeConfig)) {
 				$content         = file_get_contents($themeConfig);
 				$theme           = static::getInfo($content, $folder) + $theme;
